@@ -1,0 +1,15 @@
+body, html, p {
+	margin: 0;
+	padding: 0;
+}
+p {
+	padding-top: 20px;
+}
+.header_menu {
+	position: fixed;
+	width: 100%;
+	background-color: #000;
+}
+a {
+	color: #fff;
+}

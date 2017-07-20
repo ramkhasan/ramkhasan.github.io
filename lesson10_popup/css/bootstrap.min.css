@@ -1,0 +1,22 @@
+.box {
+	display: block;
+	width: 300px;
+	height: 400px;
+	position: fixed;
+	left: 50%;
+	margin-left: -150px;
+	top: 50%;
+	margin-top: -200px;
+	background-color: #fff;
+	border: 2px solid grey;
+	padding: 20px 30px;
+}
+.col1 {
+	position: absolute;
+	width: 150px;
+}
+.col2 {
+	position: absolute;
+	width: 150px;
+	margin-left: 150px;
+}
