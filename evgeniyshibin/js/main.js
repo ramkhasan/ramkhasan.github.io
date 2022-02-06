@@ -22,14 +22,14 @@ $(window).scroll(function () {
 .scroll();
 
 // Добавление ссылки при прокрутке на верх страницы
-$(window).scroll(function() {
-  let height = $(window).scrollTop();
-  if(height > 400){
-    document.getElementById("header-logo").href="#";
-  } else{
-    document.getElementById("header-logo").href="/evgeniyshibin/index.html";
-  }
-});
+// $(window).scroll(function() {
+//   let height = $(window).scrollTop();
+//   if(height > 400){
+//     document.getElementById("header-logo").href="#";
+//   } else{
+//     document.getElementById("header-logo").href="/evgeniyshibin/index.html";
+//   }
+// });
 
 // Плавная прокрутка на верх страницы
 $("#header-logo").click(function() {
