@@ -27,7 +27,7 @@ $(window).scroll(function() {
   if(height > 400){
     document.getElementById("header-logo").href="#";
   } else{
-    document.getElementById("header-logo").href="/index.html";
+    document.getElementById("header-logo").href="/evgeniyshibin/index.html";
   }
 });
 
