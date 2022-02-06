@@ -1,0 +1,57 @@
+.skills 
+  &-item 
+    margin-bottom: 46px
+    display: flex
+    flex-direction: column 
+    &:last-child
+      margin-bottom: 0 
+    &.aboutpage
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+    &__title 
+      margin-bottom: 24px
+      +black
+      font-size: 30px
+      &.aboutpage 
+        display: flex 
+        justify-content: space-between 
+        align-items: center
+        & span 
+          font-size: 12px 
+    &__description 
+      +med
+      font-size: 18px 
+      line-height: 32px
+      color: $main-color-70
+      &.aboutpage 
+        color: rgba(255, 255, 255, 0.4)
+  &.aboutpage 
+    background-color: $main-color 
+    color: $bg-color
+    &.section 
+        padding-bottom: 0 
+
+@media ( max-width: 425px )
+  .skills 
+    &-block 
+      margin-bottom: 44px
+    &-item 
+      margin-bottom: 76px
+      &__title 
+        margin-bottom: 38px
+        font-size: 26px
+        &.aboutpage
+          align-items: flex-start
+          flex-flow: column-reverse 
+          margin-bottom: 28px
+          font-size: 16px
+          & span 
+            margin-bottom: 15px 
+            +reg 
+            color: rgba(255, 255, 255, 0.4) 
+      &__description 
+        font-size: 14px
+        line-height: 25px
+        &.aboutpage 
+          margin-bottom: 12px
+          font-size: 12px 
+          line-height: 22px

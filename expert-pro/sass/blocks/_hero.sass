@@ -1,0 +1,23 @@
+.hero 
+  color: $white-color
+  background-color: $bg-color
+  &-block 
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-text
+    max-width: 702px
+    width: 100%
+    &__title 
+      margin-bottom: 50px
+      +bold
+      font-size: 30px
+      line-height: 1.1
+      text-transform: uppercase
+      & span
+        color: $main-color
+        font-size: 90px
+        line-height: 1.1
+    &__list 
+      color: $main-color
+      font-size: 30px

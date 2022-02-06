@@ -1,0 +1,508 @@
+*
+  box-sizing: border-box
+  user-select: none
+body
+  position: relative
+  color: $main-color
+  height: 100%
+  background: $bg-color
+  font-family: 'Montserrat Regular', sans-serif
+h1, h2, h3 
+  margin: 0 
+  font-weight: normal 
+p 
+  margin: 0 
+img
+  max-width: 100%
+main 
+  position: relative
+  overflow: hidden
+ul, ol 
+  margin: 0
+  padding: 0
+  list-style: none
+.container
+  position: relative
+  width: 1110px
+  margin: auto
+.section
+  padding: 100px 0
+  &-title 
+    font-family: 'Montserrat Regular', sans-serif
+    font-size: 36px
+    text-align: center
+    margin: auto
+    padding-bottom: 74px
+.dark 
+  background-color: $main-color
+.link 
+  position: relative
+  padding-bottom: 2px
+  z-index: 0
+  display: inline-block
+  color: $main-color
+  text-decoration: none
+  transition: color .3s linear .2s
+  &:after 
+    content: ''
+    position: absolute
+    bottom: 0
+    height: 1px
+    left: -0.025em
+    right: -0.075em
+    background: $main-color
+    background-size: 100% 100%
+    transition: .3s opacity, background .3s linear .2s
+    transform: translateZ(0)
+  &:hover:after 
+    opacity: 0
+
+// Menu
+.menu
+  position: relative
+  top: 0
+  right: 0
+  z-index: 15
+  width: 43px
+  height: 43px
+  & a.target-burger
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100%
+    transition: all .3s ease
+    &:hover
+      cursor: pointer
+      opacity: .7
+    & ul.buns
+      margin: 10px
+      padding: 0
+      width: 23px
+      height: 23px
+      list-style: none
+      color: $bg-color
+      transition: transform 1s cubic-bezier(.23,1,.32,1),color 1s cubic-bezier(.23,1,.32,1)
+      transform: translateZ(0)
+      & li
+        &.bun
+          position: absolute
+          top: 40%
+          width: 100%
+          height: 2px
+          border-radius: 2px
+          background-color: $main-color
+          transform: translateY(-3px) translateZ(0)
+          transition: 500ms background cubic-bezier(0.19, 1, 0.22, 1), 500ms margin-top cubic-bezier(0.19, 1, 0.22, 1), 500ms margin-bottom cubic-bezier(0.19, 1, 0.22, 1), 500ms transform cubic-bezier(0.19, 1, 0.22, 1) 83ms
+          transition: all .3s ease
+          &:last-child
+            top: 52%
+            transform: translateY(3px) translateZ(0)
+    &.toggled
+      ul.buns
+        li.bun
+          top: 50%
+          background-color: $bg-color !important
+          transform: rotate(45deg) translateZ(0)
+          &:last-child
+            transform: rotate(-45deg) translateZ(0)
+nav
+  &.main-nav
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 0
+    height: 130px
+    width: 100%
+    padding: 30px
+    background-color: $main-color
+    opacity: 0
+    visibility: hidden
+    transform: none
+    transition: opacity .4s cubic-bezier(0.19, 1, 0.22, 1), transform .4s cubic-bezier(0.19, 1, 0.22, 1), visibility .4s step-end
+    &.toggled
+      display: block
+      z-index: 10
+      opacity: 1
+      visibility: inherit
+      transition: opacity .4s cubic-bezier(0.19, 1, 0.22, 1), transform .4s cubic-bezier(0.19, 1, 0.22, 1), visibility .4s step-start
+      &.main-nav ul li
+        transform: none
+        transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1) 33ms, .3s transform cubic-bezier(0.165, 0.84, 0.44, 1) 33ms
+    & ul
+      display: flex 
+      align-items: center
+      max-width: 1110px
+      margin: auto
+      & li
+        display: flex
+        transform: translateY(-30px)
+        transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1) 33ms, .3s transform cubic-bezier(0.165, 0.84, 0.44, 1) 33ms
+        &:last-child
+          margin-left: auto
+        & a.item
+          position: relative
+          margin-right: 130px
+          margin-top: 18px
+          margin-bottom: 18px
+          padding-bottom: 2px
+          font-family: 'Montserrat Black', sans-serif
+          font-size: 30px
+          text-decoration: none
+          color: $bg-color
+          transition: all .3s ease
+          &:after 
+            content: ''
+            position: absolute
+            bottom: 0
+            height: 1px
+            left: -0.025em
+            right: -0.075em
+            background: $bg-color
+            background-size: 100% 100%
+            opacity: 0
+            transition: .3s opacity, background .3s linear .2s
+          &:hover:after 
+            content: ''
+            opacity: 1
+            position: absolute
+            bottom: 0
+            height: 1px
+            left: -0.025em
+            right: -0.075em
+            background: $bg-color
+            background-size: 100% 100%
+            transition: .3s opacity, background .3s linear .2s
+          &.active 
+            &:after 
+              content: none
+            &:active 
+              color: $bg-color
+          &:active 
+            color: $bg-color-70
+        & a.link 
+          color: $bg-color
+          font-size: 18px
+          transition: all .3s ease
+          &:before 
+            background: $bg-color
+          &:after 
+            background: $bg-color
+.main-nav-bg 
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 10px
+  background: repeating-linear-gradient(45deg, #ffffff, #ffffff 2px, #2a2d3a 0, #2a2d3a 10px)
+
+// Accordion
+.dropdown 
+  width: 100%
+  & + .dropdown 
+    margin-top: 36px
+  &__top 
+    max-width: 720px
+    width: 100%
+    color: $bg-color
+    font-family: 'Montserrat Semibold', sans-serif
+    font-size: 24px 
+    line-height: 36px 
+    cursor: pointer
+    transition: 0.3s color 
+    & em 
+      display: inline-block 
+      margin: 5px 11px
+      width: 8px
+      height: 8px
+      border-left: 2px solid rgba(249, 249, 249, 0.3)
+      border-top: 2px solid rgba(249, 249, 249, 0.3)
+      transform: translate3d(0, 0, 0) rotate(-135deg)
+      transform-origin: 50% 50%
+      transition: 0.3s border-color, 0.3s transform cubic-bezier(0.19, 1, 0.22, 1)
+    &:hover 
+      color: $bg-color-70
+  &.open 
+    & em 
+      transform: translate3d(0, 4px, 0) rotate(45deg)
+    & .dropdown__btm 
+      opacity: 1
+  &__btm 
+    display: none
+    width: 100% 
+    padding: 24px 0 0 
+    color: rgba(255, 255, 255, 0.7)
+    font-family: 'Montserrat Medium', sans-serif
+    font-size: 14px
+    line-height: 22px 
+    opacity: 0
+    transition: opacity .3s ease 0s 
+
+// Slider
+.swiper 
+  width: 1110px !important
+  height: 100%
+  border-radius: 16px
+  &-slide 
+    width: 540px
+    text-align: center
+    font-size: 18px
+    background: $bg-color
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 16px
+    overflow: hidden
+    transition: all .3s ease
+    & img 
+      display: block
+      width: 100%
+      height: 100%
+      object-fit: cover
+      border-radius: 16px
+      transition: all .3s ease
+    &:hover 
+      cursor: pointer
+      &.swiper-slide img
+        transform: scale(1.05)
+    & a 
+      width: 100%
+      height: 100%
+.swiper-button-next, .swiper-button-prev
+  top: 506px !important
+  color: $main-color !important
+  transition: all .3s ease
+  &:hover 
+    color: $main-color-70 !important
+.swiper-button-prev, .swiper-rtl .swiper-button-next
+  left: auto !important
+  right: 64px !important
+.swiper-button-next, .swiper-rtl .swiper-button-prev
+  right: 0 !important
+.swiper-button-next:after, .swiper-button-prev:after
+  font-size: 30px !important
+
+// Popup
+.fancybox
+  &__nav
+    visibility: hidden
+  &__slide
+    padding: 0 !important
+    & img 
+      border-radius: 16px
+      opacity: 0
+      transition: all .3s ease
+    &.is-selected
+      & img 
+        opacity: 1
+.carousel__button.is-close
+  top: 54px !important
+  right: calc(((100vw - 1250px) / 2) + 10px) !important
+  width: 22px
+  height: 22px
+  transition: all .3s ease
+  &:hover 
+    opacity: .7
+
+// Animation 
+.show-on-scroll
+  opacity: 0
+  transform: translate3d(0, 50px, 0)
+  transition: opacity .5s cubic-bezier(0.165, 0.84, 0.44, 1) .3s, transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) .3s
+  &__1
+    transition: opacity .5s cubic-bezier(0.165, 0.84, 0.44, 1) .5s, transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) .5s
+  &__2
+    transition: opacity .5s cubic-bezier(0.165, 0.84, 0.44, 1) .7s, transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) .7s
+.is-visible 
+  opacity: 1
+  transform: none
+
+@media (min-width: 768px)
+  .fancybox
+    &__content
+      width: 670px !important
+      height: 500px !important  
+@media (min-width: 1368px)
+  .fancybox
+    &__content
+      width: 1000px !important
+      height: 750px !important
+@media (min-width: 1440px)
+  .swiper 
+    width: 1680px !important
+@media (min-width: 1920px)
+  .carousel__button.is-close
+    right: calc(((100vw - 1660px) / 2) + 10px) !important
+@media (min-width: 2560px)
+  .swiper 
+    width: 2250px !important
+
+@media (max-width: 1440px)
+  nav.main-nav ul li:last-child
+    margin-right: 50px
+@media (max-width: 1200px)
+  .container
+    max-width: 760px
+    width: 95%
+  nav.main-nav ul
+    max-width: 760px
+    width: 100%
+    & li
+      & a.item
+        margin-right: 80px
+      &:last-child
+        margin-right: 0
+  .carousel__button.is-close
+    right: calc(((100vw - 900px) / 2) + 10px) !important
+@media (max-width: 1024px)
+  nav.main-nav ul li:last-child
+    margin-right: 50px
+@media (max-width: 947px)
+  .carousel__button.is-close
+    right: calc(((100vw - 95%) / 2) + 10px) !important
+@media (max-width: 860px)
+  nav.main-nav ul li a.item 
+    margin-right: 60px
+@media (max-width: 768px)
+  .container
+    max-width: 580px
+    width: 90% 
+  .link 
+    &:hover:after 
+      opacity: 1
+  .menu
+    & a.target-burger
+      &:hover
+        opacity: 1
+  nav.main-nav ul
+    & li
+      & a.item
+        margin-rigt: 40px
+        font-size: 24px
+      & a.link 
+        font-size: 16px
+      &:last-child
+        margin-right: 70px
+  .dropdown 
+    &__top 
+      &:hover 
+        color: $bg-color
+        &.dropdown__top em 
+          border-color: rgba(249, 249, 249, 0.3)
+  .swiper 
+    width: 100% !important
+    &-slide
+      &:hover 
+        &.swiper-slide img
+          transform: none
+  .swiper-button-prev, .swiper-rtl .swiper-button-next
+    top: 366px !important
+    left: 35% !important
+  .swiper-button-next, .swiper-rtl .swiper-button-prev
+    top: 366px !important
+    right: 35% !important
+  a, .dropdown__top, .swiper-button-next, .swiper-rtl .swiper-button-prev, .swiper-button-prev, .swiper-rtl .swiper-button-next
+    -webkit-tap-highlight-color: rgba(0,0,0,0) 
+    -webkit-tap-highlight-color: transparent
+  .carousel__button.is-close
+    right: calc(((100vw - 90%) / 2) + 10px) !important
+@media (max-width: 767px)
+  .fancybox
+    &__content
+      width: 500px !important
+      height: 375px !important
+@media (max-width: 680px)
+  nav.main-nav ul
+    & li
+      & a.item
+        margin: 22px 30px 22px 0
+        font-size: 22px
+@media (max-width: 600px)
+  nav.main-nav ul
+    & li
+      & a.item
+        font-size: 20px
+      & a.link 
+        font-size: 14px
+      &:last-child
+        margin-right: 50px
+@media (max-width: 540px)
+  nav.main-nav ul
+    & li
+      & a.item
+        margin-right: 10px
+@media (max-width: 490px)
+  .section
+    &-title
+      font-size: 25px
+      line-height: 36px
+  nav
+    &.main-nav
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      padding: 20px
+      & ul 
+        flex-direction: column
+        align-items: flex-start
+        margin-top: 140px
+        & li
+          &:last-child
+            margin-left: 0
+          &:nth-child(3)
+            transform: translateY(30px)
+            transition: 670ms cubic-bezier(0.165, 0.84, 0.44, 1) 133ms, 670ms transform cubic-bezier(0.165, 0.84, 0.44, 1) 133ms
+          & a.item
+            margin-top: 20px
+            margin-bottom: 20px
+            font-size: 32px
+          & a.link
+            margin-top: 143px
+            font-size: 18px
+      &.toggled
+        &.main-nav ul li
+          &:nth-child(1)
+            transition: 670ms cubic-bezier(0.165, 0.84, 0.44, 1) 33ms, 670ms transform cubic-bezier(0.165, 0.84, 0.44, 1) 33ms
+          &:nth-child(2)
+            transition: 670ms cubic-bezier(0.165, 0.84, 0.44, 1) 83ms, 670ms transform cubic-bezier(0.165, 0.84, 0.44, 1) 83ms
+          &:nth-child(3)
+            transform: none
+            transition: 670ms cubic-bezier(0.165, 0.84, 0.44, 1) 133ms, 670ms transform cubic-bezier(0.165, 0.84, 0.44, 1) 133ms
+  .main-nav-bg 
+    display: none
+  .swiper-button-prev, .swiper-rtl .swiper-button-next
+    top: 272px !important
+  .swiper-button-next, .swiper-rtl .swiper-button-prev
+    top: 272px !important
+@media (max-width: 425px)
+  .menu
+    right: -6px
+  .dropdown 
+    & + .dropdown 
+      margin-top: 34px
+    &__top 
+      font-size: 20px 
+      line-height: 28px 
+    &__btm 
+      padding: 26px 0 0
+      line-height: 25px
+  .swiper-button-next, .swiper-button-prev
+    &:hover 
+      color: $main-color !important
+  .fancybox
+    &__slide img 
+      border-radius: 0
+    &__content
+      width: 100% !important
+      height: 270px !important
+  .carousel__button.is-close
+    top: 53px !important
+    right: calc(((100vw - 90%) / 2) + 4px) !important
+@media (max-width: 359px)
+  .swiper-button-next, .swiper-rtl .swiper-button-prev, .swiper-button-prev, .swiper-rtl .swiper-button-next
+    top: 250px !important
+@media (max-width: 320px)
+  .container
+    max-width: 750px

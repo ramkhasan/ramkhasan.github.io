@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'PT Sans Caption';
+  src: url('../fonts/PTSans/PTSans-Caption.eot');
+  src: local('PT Sans Caption'), local('PTSans-Caption'),
+      url('../fonts/PTSans/PTSans-Caption.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PTSans/PTSans-Caption.woff2') format('woff2'),
+      url('../fonts/PTSans/PTSans-Caption.woff') format('woff'),
+      url('../fonts/PTSans/PTSans-Caption.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PT Sans Caption Bold';
+  src: url('../fonts/PTSans/PTSans-CaptionBold.eot');
+  src: local('PT Sans Caption Bold'), local('PTSans-CaptionBold'),
+      url('../fonts/PTSans/PTSans-CaptionBold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PTSans/PTSans-CaptionBold.woff2') format('woff2'),
+      url('../fonts/PTSans/PTSans-CaptionBold.woff') format('woff'),
+      url('../fonts/PTSans/PTSans-CaptionBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: auto;
+  font-display: swap;
+}
+
+@mixin reg {
+  font-family: 'PT Sans Caption', sans-serif;
+}
+@mixin bold {
+    font-family: 'PT Sans Caption Bold', sans-serif;
+}
