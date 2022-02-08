@@ -57,6 +57,11 @@ function isElementInViewport(el) {
   );
 };
 
+let button = document.querySelector('button');
+setTimeout(function() {
+  button.classList.remove("show-on-scroll", "show-on-scroll__5");
+}, 1000);
+
 //Fancybox 
 Fancybox.bind('[data-fancybox="dialog"]', {
   Carousel: {
