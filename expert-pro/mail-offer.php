@@ -28,7 +28,7 @@ $mail->addAddress('ramhas87@gmail.com');     // Кому будет уходит
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Заявка с сайта кспертПро';
+$mail->Subject = 'Заявка с сайта ЭкспертПро';
 $mail->Body    = '<b>Новый клиент оставил заявку на получение предварительной оценки ситуации.</b><br>
 Его имя: <i>'.$name.'</i>.<br>
 Его телефон: <i>'.$phone.'</i>.<br>
@@ -39,10 +39,7 @@ if(!$mail->send()) {
   echo 'Error';
 } 
 else {
-  Swal.fire(
-    'Good job!',
-    'You clicked the button!',
-    'success'
-  ); exit();
+  // header('location: thanks.html'); exit();
+  alert('Спасибо за заявку!'); exit();
 }
 ?>
