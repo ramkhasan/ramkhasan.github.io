@@ -220,7 +220,7 @@ input.error {
   border: 2px solid red;
 }
 
-#phone-error, #email-error, #dialog_form_phone-error, #dialog_form_email-error, #callback_form_phone-error, #callback_form_email-error, #offer_form_phone-error, #offer_form_email-error {
+#phone-error, #email-error, #dialog-form-phone-error, #dialog-form-email-error, #callback-form-phone-error, #callback-form-email-error, #offer-form-phone-error, #offer-form-email-error {
   position: relative;
   left: 24px;
   bottom: 20px;
