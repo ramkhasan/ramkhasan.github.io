@@ -46,7 +46,7 @@
             </div>
             <!-- /.header-phone -->
   
-            <a href="#" class="header-callback">Заказать звонок</a>
+            <a href="#" class="header-callback" data-fancybox="dialog" data-src="#callback-content">Заказать звонок</a>
             <!-- /.header-callback -->
 
           </div>
@@ -96,7 +96,7 @@
           </div>
           <!-- /.header-phone -->
   
-          <a href="#" class="header-callback item">Заказать звонок</a>
+          <a href="#" class="header-callback item" data-fancybox="dialog" data-src="#callback-content">Заказать звонок</a>
           <!-- /.header-callback -->
 
         </div>
@@ -136,7 +136,7 @@
             </ul>
             <!-- /.hero-text__list -->
 
-            <button class="button hero-text__button">Заказать экспертизу</button>
+            <button class="button hero-text__button" data-fancybox="dialog" data-src="#dialog-content">Заказать экспертизу</button>
             <!-- /.button hero-text__button -->
 
           </div>
@@ -203,26 +203,26 @@
           </div>
           <!-- /.offer-image -->
   
-          <div class="offer-form">
+          <div class="form offer-form">
   
-            <form action="mail-offer.php" method="POST" class="offer-form__block" enctype="multipart/form-data" id="offer-form">
+            <form action="mail-offer.php" method="POST" class="form__block offer-form__block" enctype="multipart/form-data" id="offer-form">
 
-              <h3 class="offer-form__title">
+              <h3 class="form__title offer-form__title">
                 В некоторых случаях вы можете <span>получить предварительную оценку </span>вашей ситуации у эксперта
               </h3>
   
-              <label for="name" class="offer-form__label">Имя</label>
-              <input type="text" name="name" id="name" class="input offer-form__input" />
+              <label for="name" class="form__label offer-form__label">Имя</label>
+              <input type="text" name="name" id="name" class="form__input offer-form__input" />
 
-              <label for="phone" class="offer-form__label">Телефон <span>(Обязательно)</span></label>
-              <input type="tel" name="phone" id="phone" class="input offer-form__input" required />
+              <label for="phone" class="form__label offer-form__label">Телефон <span>(Обязательно)</span></label>
+              <input type="tel" name="phone" id="phone" class="form__input offer-form__input" required />
 
-              <label for="email" class="offer-form__label">E-mail <span>(Обязательно)</span></label>
-              <input type="email" name="email" id="email" class="input offer-form__input" required />
+              <label for="email" class="form__label offer-form__label">E-mail <span>(Обязательно)</span></label>
+              <input type="email" name="email" id="email" class="form__input offer-form__input" required />
   
-              <button class="button offer-form__button">Получить оценку</button>
+              <button class="button form__button offer-form__button">Получить оценку</button>
 
-              <a class="offer-form__privacy link" href="javascript:;" data-fancybox data-type="iframe" data-src="modal-privacy.html">*Гарантия конфиденциальности.</a>
+              <p class="form__privacy offer-form__privacy">*Гарантия конфиденциальности.</p>
   
             </form>
             <!-- /.offer__form-block -->
@@ -239,13 +239,73 @@
     </section>
     <!-- /.section offer -->
 
+    <div id="dialog-content" style="display:none;max-width:500px;">
+      
+      <div class="form">
+  
+        <form action="mail-offer.php" method="POST" class="form__block" enctype="multipart/form-data" id="form">
+
+          <h3 class="form__title">Закажите экспертизу</h3>
+
+          <label for="name" class="form__label">Имя</label>
+          <input type="text" name="name" id="name" class="input form__input" />
+
+          <label for="phone" class="form__label">Телефон <span>(Обязательно)</span></label>
+          <input type="tel" name="phone" id="phone" class="input form__input" required />
+
+          <label for="email" class="form__label">E-mail <span>(Обязательно)</span></label>
+          <input type="email" name="email" id="email" class="input form__input" required />
+
+          <button class="button form__button">Заказать экспертизу</button>
+
+          <p class="form__privacy">*Гарантия конфиденциальности.</p>
+
+        </form>
+        <!-- /.form__block -->
+
+      </div>
+      <!-- /.form -->
+
+    </div>
+    <!-- /#dialog-content -->
+
+    <div id="callback-content" style="display:none;max-width:500px;">
+      
+      <div class="form">
+  
+        <form action="mail-offer.php" method="POST" class="form__block" enctype="multipart/form-data" id="form">
+
+          <h3 class="form__title">Закажите звонок</h3>
+
+          <label for="name" class="form__label">Имя</label>
+          <input type="text" name="name" id="name" class="input form__input" />
+
+          <label for="phone" class="form__label">Телефон <span>(Обязательно)</span></label>
+          <input type="tel" name="phone" id="phone" class="input form__input" required />
+
+          <label for="email" class="form__label">E-mail <span>(Обязательно)</span></label>
+          <input type="email" name="email" id="email" class="input form__input" required />
+
+          <button class="button form__button">Заказать звонок</button>
+
+          <p class="form__privacy">*Гарантия конфиденциальности.</p>
+
+        </form>
+        <!-- /.form__block -->
+
+      </div>
+      <!-- /.form -->
+
+    </div>
+    <!-- /#callback-content -->
+
   </main>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-  <!-- <link rel="stylesheet" href="css/fancybox.css" />
-  <script src="js/fancybox.umd.js"></script> -->
+  <link rel="stylesheet" href="css/fancybox.css" />
+  <script src="js/fancybox.umd.js"></script>
 
   <script src="js/main.js"></script>
 
