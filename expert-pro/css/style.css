@@ -221,8 +221,12 @@ input.error {
 }
 
 #name-error, #phone-error, #email-error, #password-error, #last_name-error, #password_conf-error, #code-error {
+  position: relative;
+  left: 24px;
+  bottom: 20px;
   display: block;
-  font-size: 12px;
+  height: 0;
+  font-size: 10px;
   color: red;
 }
 
