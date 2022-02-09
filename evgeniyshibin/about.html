@@ -88,52 +88,6 @@
     </section>
     <!-- /.hero section -->
 
-    <!-- <section class="skills aboutpage section dark show-on-scroll">
-
-      <div class="container">
-
-        <div class="skills-block">
-
-          <div class="skills-item aboutpage show-on-scroll">
-
-            <h3 class="skills-item__title aboutpage show-on-scroll">
-              UX/UI-дизайнер
-              <span>2016-настоящее время</span>
-            </h3>
-
-            <p class="skills-item__description aboutpage show-on-scroll show-on-scroll__1">В UX/UI-дизайн переквалифицировался в 2016 году. До 2018 параллельно работал в наружной рекламе зам. начальника производства и там же ведущим дизайнером.</p>
-
-          </div>
-
-          <div class="skills-item aboutpage show-on-scroll">
-
-            <h3 class="skills-item__title aboutpage show-on-scroll">
-              Бренд-дизайнер
-              <span>2012-2016</span>
-            </h3>
-
-            <p class="skills-item__description aboutpage show-on-scroll show-on-scroll__1">В 2012 году пригласили по рекомендации на телевидение бренд-дизайнером, где работал над теле-/радиоканалами, программами, сайтами и интерфейсами, как личные кабинеты, панели администраторов и др.</p>
-
-          </div>
-
-          <div class="skills-item aboutpage show-on-scroll">
-
-            <h3 class="skills-item__title aboutpage show-on-scroll">
-              Графический дизайнер
-              <span>2005-2012</span>
-            </h3>
-
-            <p class="skills-item__description aboutpage show-on-scroll show-on-scroll__1">В 2005 году начал работать дизайнером полиграфической/сувенирной продукции и частично наружной рекламы. В 2009 полностью ушёл в наружную рекламу, где занимался дизайном вывесок и др. рекламных конструкций, фасадов, печатной продукции (офсетная, широкоформатная, интерьерная), а также поиском клиентов (холодные/горячие звонки) и просчётом от визитных карт до вывесок.</p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section> -->
-    <!-- /.skills section -->
-
     <section class="faq aboutpage section">
 
       <div class="container">
@@ -343,6 +297,25 @@
   <script src="js/fancybox.umd.js"></script>
 
   <script src="js/main.js"></script>
+
+  <script>
+    // Добавление и удаление ссылки при прокрутке страницы
+    let about = document.getElementById("about");
+
+    $(window).scroll(function () {
+      let scroll = $(window).scrollTop();
+
+      if (scroll >= 400) {
+        about.href="#";
+      } else {
+        about.href="/evgeniyshibin/about.html";
+      }
+    });
+    // Плавная прокрутка на верх страницы
+    $(about).click(function() {
+      $("html, body").animate({scrollTop: 0}, 1500);
+    });
+  </script>
 
 </body>
 </html>

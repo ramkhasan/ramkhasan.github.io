@@ -19,7 +19,7 @@
 
       <nav class="main-nav">
         <ul>
-          <li><a class="item" id="projects">Проекты</a></li>
+          <li><a class="item" id="projects" href="/evgeniyshibin/progects.html">Проекты</a></li>
           <li><a class="item" href="/evgeniyshibin/about.html">Обо мне</a></li>
           <li><a class="link" href="mailto:hello@evgeniyshibin.ru">hello@evgeniyshibin.ru</a></li>
         </ul>
@@ -272,6 +272,25 @@
   <script src="js/fancybox.umd.js"></script>
 
   <script src="js/main.js"></script>
+
+  <script>
+    // Добавление и удаление ссылки при прокрутке страницы
+    let projects = document.getElementById("projects");
+
+    $(window).scroll(function () {
+      let scroll = $(window).scrollTop();
+
+      if (scroll >= 400) {
+        projects.href="#";
+      } else {
+        projects.href="/evgeniyshibin/projects.html";
+      }
+    });
+    // Плавная прокрутка на верх страницы
+    $(projects).click(function () {
+      $("html, body").animate({scrollTop: 0}, 1500);
+    });
+  </script>
 
 </body>
 </html>
