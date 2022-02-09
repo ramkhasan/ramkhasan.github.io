@@ -22,18 +22,44 @@ $(window).scroll(function () {
 .scroll();
 
 // Добавление ссылки при прокрутке на верх страницы
+$(window).scroll(function() {
+  let height = $(window).scrollTop();
+  if(height > 400){
+    document.getElementById("projects").href="#";
+  } else{
+    document.getElementById("projects").href="/evgeniyshibin/projects.html";
+  }
+});
 // $(window).scroll(function() {
 //   let height = $(window).scrollTop();
 //   if(height > 400){
-//     document.getElementById("header-logo").href="#";
+//     document.getElementById("about").href="#";
 //   } else{
-//     document.getElementById("header-logo").href="/evgeniyshibin/index.html";
+//     document.getElementById("about").href="/evgeniyshibin/about.html";
 //   }
 // });
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+    document.getElementById("about").href="#";
+  } else {
+    document.getElementById("about").href="/evgeniyshibin/about.html";
+  }
+}
 
 // Плавная прокрутка на верх страницы
 $("#header-logo").click(function() {
-  $("html").animate({scrollTop: 0}, 1500);
+  $("html, body").animate({scrollTop: 0}, 1500);
+  return false;
+});
+$("#projects").click(function() {
+  $("html, body").animate({scrollTop: 0}, 1500);
+  return false;
+});
+$("#about").click(function() {
+  $("html, body").animate({scrollTop: 0}, 1500);
+  return false;
 });
 
 // Menu
