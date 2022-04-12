@@ -448,8 +448,12 @@ nav.main-nav ul li a.link:active {
   color: rgba(42, 45, 58, 0.7) !important;
 }
 
-.swiper-button-next:focus-visible, .swiper-button-prev:focus-visible {
+.swiper-button-next:focus, .swiper-button-prev:focus {
   outline: none;
+}
+
+.swiper-button-next:-moz-focus-inner, .swiper-button-prev:-moz-focus-inner {
+  border: 0;
 }
 
 .swiper-button-prev, .swiper-rtl .swiper-button-next {
