@@ -97,6 +97,7 @@ function isElementInViewport(el) {
 const swiper1 = new Swiper(".project-1", {
   slidesPerView: 1,
   spaceBetween: 30,
+  loop: true,
   speed: 500,
   navigation: {
     nextEl: ".swiper-button-next-1",
@@ -117,6 +118,7 @@ const swiper1 = new Swiper(".project-1", {
 const swiper2 = new Swiper(".project-2", {
   slidesPerView: 1,
   spaceBetween: 30,
+  loop: true,
   speed: 500,
   navigation: {
     nextEl: ".swiper-button-next-2",
@@ -137,6 +139,7 @@ const swiper2 = new Swiper(".project-2", {
 const swiper3 = new Swiper(".project-3", {
   slidesPerView: 1,
   spaceBetween: 30,
+  loop: true,
   speed: 500,
   navigation: {
     nextEl: ".swiper-button-next-3",
@@ -158,7 +161,7 @@ const swiper3 = new Swiper(".project-3", {
 // Fancybox
 if (window.matchMedia('(min-width: 1369px)').matches) {
   Fancybox.bind('[data-fancybox="gallery-1"]', {
-    infinite: false,
+    infinite: true,
     dragToClose: false,
     closeButton: "top",
     Image: {
@@ -188,7 +191,7 @@ if (window.matchMedia('(min-width: 1369px)').matches) {
   });
 } else {
   Fancybox.bind('[data-fancybox="gallery-1"]', {
-    infinite: false,
+    infinite: true,
     dragToClose: false,
     closeButton: "top",
     Image: {
@@ -219,7 +222,7 @@ if (window.matchMedia('(min-width: 1369px)').matches) {
 };
 if (window.matchMedia('(min-width: 1369px)').matches) {
   Fancybox.bind('[data-fancybox="gallery-2"]', {
-    infinite: false,
+    infinite: true,
     dragToClose: false,
     closeButton: "top",
     Image: {
@@ -249,7 +252,7 @@ if (window.matchMedia('(min-width: 1369px)').matches) {
   });
 } else {
   Fancybox.bind('[data-fancybox="gallery-2"]', {
-    infinite: false,
+    infinite: true,
     dragToClose: false,
     closeButton: "top",
     Image: {
@@ -280,7 +283,7 @@ if (window.matchMedia('(min-width: 1369px)').matches) {
 };
 if (window.matchMedia('(min-width: 1369px)').matches) {
   Fancybox.bind('[data-fancybox="gallery-3"]', {
-    infinite: false,
+    infinite: true,
     dragToClose: false,
     closeButton: "top",
     Image: {
@@ -310,7 +313,7 @@ if (window.matchMedia('(min-width: 1369px)').matches) {
   });
 } else {
   Fancybox.bind('[data-fancybox="gallery-3"]', {
-    infinite: false,
+    infinite: true,
     dragToClose: false,
     closeButton: "top",
     Image: {
