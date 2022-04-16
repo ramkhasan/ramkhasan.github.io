@@ -159,186 +159,87 @@ const swiper3 = new Swiper(".project-3", {
 });
 
 // Fancybox
-if (window.matchMedia('(min-width: 1369px)').matches) {
-  Fancybox.bind('[data-fancybox="gallery-1"]', {
-    infinite: true,
-    dragToClose: false,
-    closeButton: "top",
-    Image: {
-      fit: "cover",
-    },
-    Toolbar: false,
-    Thumbs: false,
-    Carousel: {
-      Panzoom: {
-        touch: false,
-      },
-      Navigation: false,
-    },
-    l10n: {
-      CLOSE: "Закрыть",
-      NEXT: "Следующий",
-      PREV: "Предыдущий",
-      ERROR: "Запрошенный контент не загружается. <br/> Пожалуйста, повторите попытку позже.",
-      PLAY_START: "Начать слайд-шоу",
-      PLAY_STOP: "Приостановить слайд-шоу",
-      FULL_SCREEN: "На полный экран",
-      THUMBS: "Миниатюры",
-      DOWNLOAD: "Скачать",
-      SHARE: "Поделиться",
-      ZOOM: "Увеличить"
-    },
-  });
-} else {
-  Fancybox.bind('[data-fancybox="gallery-1"]', {
-    infinite: true,
-    dragToClose: false,
-    closeButton: "top",
-    Image: {
-      fit: "cover",
-    },
-    Toolbar: false,
-    Thumbs: false,
-    Carousel: {
-      Panzoom: {
-        touch: true,
-      },
-      Navigation: false,
-    },
-    l10n: {
-      CLOSE: "Закрыть",
-      NEXT: "Следующий",
-      PREV: "Предыдущий",
-      ERROR: "Запрошенный контент не загружается. <br/> Пожалуйста, повторите попытку позже.",
-      PLAY_START: "Начать слайд-шоу",
-      PLAY_STOP: "Приостановить слайд-шоу",
-      FULL_SCREEN: "На полный экран",
-      THUMBS: "Миниатюры",
-      DOWNLOAD: "Скачать",
-      SHARE: "Поделиться",
-      ZOOM: "Увеличить"
-    },
-  });
-};
-if (window.matchMedia('(min-width: 1369px)').matches) {
-  Fancybox.bind('[data-fancybox="gallery-2"]', {
-    infinite: true,
-    dragToClose: false,
-    closeButton: "top",
-    Image: {
-      fit: "cover",
-    },
-    Toolbar: false,
-    Thumbs: false,
-    Carousel: {
-      Panzoom: {
-        touch: false,
-      },
-      Navigation: false,
-    },
-    l10n: {
-      CLOSE: "Закрыть",
-      NEXT: "Следующий",
-      PREV: "Предыдущий",
-      ERROR: "Запрошенный контент не загружается. <br/> Пожалуйста, повторите попытку позже.",
-      PLAY_START: "Начать слайд-шоу",
-      PLAY_STOP: "Приостановить слайд-шоу",
-      FULL_SCREEN: "На полный экран",
-      THUMBS: "Миниатюры",
-      DOWNLOAD: "Скачать",
-      SHARE: "Поделиться",
-      ZOOM: "Увеличить"
-    },
-  });
-} else {
-  Fancybox.bind('[data-fancybox="gallery-2"]', {
-    infinite: true,
-    dragToClose: false,
-    closeButton: "top",
-    Image: {
-      fit: "cover",
-    },
-    Toolbar: false,
-    Thumbs: false,
-    Carousel: {
-      Panzoom: {
-        touch: true,
-      },
-      Navigation: false,
-    },
-    l10n: {
-      CLOSE: "Закрыть",
-      NEXT: "Следующий",
-      PREV: "Предыдущий",
-      ERROR: "Запрошенный контент не загружается. <br/> Пожалуйста, повторите попытку позже.",
-      PLAY_START: "Начать слайд-шоу",
-      PLAY_STOP: "Приостановить слайд-шоу",
-      FULL_SCREEN: "На полный экран",
-      THUMBS: "Миниатюры",
-      DOWNLOAD: "Скачать",
-      SHARE: "Поделиться",
-      ZOOM: "Увеличить"
-    },
-  });
-};
-if (window.matchMedia('(min-width: 1369px)').matches) {
-  Fancybox.bind('[data-fancybox="gallery-3"]', {
-    infinite: true,
-    dragToClose: false,
-    closeButton: "top",
-    Image: {
-      fit: "cover",
-    },
-    Toolbar: false,
-    Thumbs: false,
-    Carousel: {
-      Panzoom: {
-        touch: false,
-      },
-      Navigation: false,
-    },
-    l10n: {
-      CLOSE: "Закрыть",
-      NEXT: "Следующий",
-      PREV: "Предыдущий",
-      ERROR: "Запрошенный контент не загружается. <br/> Пожалуйста, повторите попытку позже.",
-      PLAY_START: "Начать слайд-шоу",
-      PLAY_STOP: "Приостановить слайд-шоу",
-      FULL_SCREEN: "На полный экран",
-      THUMBS: "Миниатюры",
-      DOWNLOAD: "Скачать",
-      SHARE: "Поделиться",
-      ZOOM: "Увеличить"
-    },
-  });
-} else {
-  Fancybox.bind('[data-fancybox="gallery-3"]', {
-    infinite: true,
-    dragToClose: false,
-    closeButton: "top",
-    Image: {
-      fit: "cover",
-    },
-    Toolbar: false,
-    Thumbs: false,
-    Carousel: {
-      Panzoom: {
-        touch: true,
-      },
-      Navigation: false,
-    },
-    l10n: {
-      CLOSE: "Закрыть",
-      NEXT: "Следующий",
-      PREV: "Предыдущий",
-      ERROR: "Запрошенный контент не загружается. <br/> Пожалуйста, повторите попытку позже.",
-      PLAY_START: "Начать слайд-шоу",
-      PLAY_STOP: "Приостановить слайд-шоу",
-      FULL_SCREEN: "На полный экран",
-      THUMBS: "Миниатюры",
-      DOWNLOAD: "Скачать",
-      SHARE: "Поделиться",
-      ZOOM: "Увеличить"
-    },
-  });
-};
+// if (window.matchMedia('(min-width: 1369px)').matches) {
+//   Fancybox.bind('[data-fancybox]', {
+//     infinite: true,
+//     dragToClose: false,
+//     closeButton: "top",
+//     Image: {
+//       fit: "cover",
+//     },
+//     Toolbar: false,
+//     Thumbs: false,
+//     Carousel: {
+//       Panzoom: {
+//         touch: false,
+//       },
+//       Navigation: false,
+//     },
+//     l10n: {
+//       CLOSE: "Закрыть",
+//       NEXT: "Следующий",
+//       PREV: "Предыдущий",
+//       ERROR: "Запрошенный контент не загружается. <br/> Пожалуйста, повторите попытку позже.",
+//       PLAY_START: "Начать слайд-шоу",
+//       PLAY_STOP: "Приостановить слайд-шоу",
+//       FULL_SCREEN: "На полный экран",
+//       THUMBS: "Миниатюры",
+//       DOWNLOAD: "Скачать",
+//       SHARE: "Поделиться",
+//       ZOOM: "Увеличить"
+//     },
+//   });
+// } else {
+//   Fancybox.bind('[data-fancybox]', {
+//     infinite: true,
+//     dragToClose: false,
+//     closeButton: "top",
+//     Image: {
+//       fit: "cover",
+//     },
+//     Toolbar: false,
+//     Thumbs: false,
+//     Carousel: {
+//       Panzoom: {
+//         touch: true,
+//       },
+//       Navigation: false,
+//     },
+//     l10n: {
+//       CLOSE: "Закрыть",
+//       NEXT: "Следующий",
+//       PREV: "Предыдущий",
+//       ERROR: "Запрошенный контент не загружается. <br/> Пожалуйста, повторите попытку позже.",
+//       PLAY_START: "Начать слайд-шоу",
+//       PLAY_STOP: "Приостановить слайд-шоу",
+//       FULL_SCREEN: "На полный экран",
+//       THUMBS: "Миниатюры",
+//       DOWNLOAD: "Скачать",
+//       SHARE: "Поделиться",
+//       ZOOM: "Увеличить"
+//     },
+//   });
+// };
+
+Fancybox.bind('#projects a', {
+  dragToClose: false,
+  closeButton: "top",
+  Toolbar: false,
+  Thumbs: false,
+  Image: {
+    zoom: false,
+  },
+  l10n: {
+    CLOSE: "Закрыть",
+    NEXT: "Следующий",
+    PREV: "Предыдущий",
+    ERROR: "Запрошенный контент не загружается. <br/> Пожалуйста, повторите попытку позже.",
+    PLAY_START: "Начать слайд-шоу",
+    PLAY_STOP: "Приостановить слайд-шоу",
+    FULL_SCREEN: "На полный экран",
+    THUMBS: "Миниатюры",
+    DOWNLOAD: "Скачать",
+    SHARE: "Поделиться",
+    ZOOM: "Увеличить"
+  },
+});
