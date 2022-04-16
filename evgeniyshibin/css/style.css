@@ -481,12 +481,16 @@ nav.main-nav ul li a.link:active {
 .fancybox__slide img {
   border-radius: 16px;
   opacity: 0;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
 }
 
 .fancybox__slide.is-selected img {
   opacity: 1;
+}
+
+.fancybox__carousel.is-draggable .fancybox__slide, .fancybox__carousel.is-draggable .fancybox__slide .fancybox__content {
+  cursor: auto !important;
 }
 
 .carousel__button.is-close {
