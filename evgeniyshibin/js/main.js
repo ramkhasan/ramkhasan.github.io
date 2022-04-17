@@ -228,6 +228,7 @@ Fancybox.bind('#projects a', {
   Thumbs: false,
   Image: {
     zoom: false,
+    click: "next",
   },
   l10n: {
     CLOSE: "Закрыть",
@@ -243,3 +244,5 @@ Fancybox.bind('#projects a', {
     ZOOM: "Увеличить"
   },
 });
+
+Fancybox.defaults.ScrollLock = false;
