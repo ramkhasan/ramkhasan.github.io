@@ -470,53 +470,59 @@ nav.main-nav ul li a.link:active {
   font-size: 30px !important;
 }
 
-.fancybox__nav {
-  visibility: hidden;
-}
-
-.fancybox__slide {
-  padding: 0 !important;
-}
-
-.fancybox__slide img {
+.fancybox-image {
   border-radius: 16px;
-  opacity: 0;
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s;
 }
 
-.fancybox__slide.is-selected img {
-  opacity: 1;
+.fancybox-toolbar, .fancybox-infobar, .fancybox-navigation .fancybox-button {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
-.fancybox__carousel.is-draggable .fancybox__slide, .fancybox__carousel.is-draggable .fancybox__slide .fancybox__content {
-  cursor: auto !important;
+.fancybox-infobar {
+  font-size: 14px !important;
 }
 
-.carousel__button.is-close {
-  top: 54px !important;
-  right: calc(((100vw - 1250px) / 2) + 10px) !important;
-  width: 22px;
-  height: 22px;
+.fancybox-button {
+  background: none !important;
+  color: #ffffff !important;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
-.carousel__button.is-close:hover {
-  opacity: .7;
+.fancybox-button:hover {
+  opacity: .7 !important;
 }
 
-.carousel__button.is-close:focus {
+.fancybox-button:focus {
   outline: none;
 }
 
-.carousel__button.is-close:-moz-focus-inner {
+.fancybox-button:-moz-focus-inner {
   border: 0;
 }
 
-body:not(.is-using-mouse) .fancybox__container :focus {
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+.fancybox-button.fancybox-button--close {
+  width: 39px !important;
+  height: 39px !important;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.fancybox-button.fancybox-button--close:hover {
+  opacity: .7;
+}
+
+.fancybox-button.fancybox-button--close:focus {
+  outline: none;
+}
+
+.fancybox-button.fancybox-button--close:-moz-focus-inner {
+  border: 0;
+}
+
+.fancybox-button.fancybox-focus {
+  outline: none !important;
 }
 
 .show-on-scroll {
@@ -550,28 +556,20 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 @media (min-width: 768px) {
-  .fancybox__content {
-    width: 670px !important;
-    height: 500px !important;
+  .fancybox-slide--image {
+    padding: calc((100vh - 500px) / 2) 0 !important;
   }
 }
 
 @media (min-width: 1368px) {
-  .fancybox__content {
-    width: 1000px !important;
-    height: 750px !important;
+  .fancybox-slide--image {
+    padding: calc((100vh - 750px) / 2) 0 !important;
   }
 }
 
 @media (min-width: 1440px) {
   .swiper {
     width: 1680px !important;
-  }
-}
-
-@media (min-width: 1920px) {
-  .carousel__button.is-close {
-    right: calc(((100vw - 1660px) / 2) + 10px) !important;
   }
 }
 
@@ -602,20 +600,11 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   nav.main-nav ul li:last-child {
     margin-right: 0;
   }
-  .carousel__button.is-close {
-    right: calc(((100vw - 900px) / 2) + 10px) !important;
-  }
 }
 
 @media (max-width: 1024px) {
   nav.main-nav ul li:last-child {
     margin-right: 50px;
-  }
-}
-
-@media (max-width: 947px) {
-  .carousel__button.is-close {
-    right: calc(((100vw - 95%) / 2) + 10px) !important;
   }
 }
 
@@ -665,15 +654,11 @@ body:not(.is-using-mouse) .fancybox__container :focus {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
   }
-  .carousel__button.is-close {
-    right: calc(((100vw - 90%) / 2) + 10px) !important;
-  }
 }
 
 @media (max-width: 767px) {
-  .fancybox__content {
-    width: 500px !important;
-    height: 375px !important;
+  .fancybox-slide--image {
+    padding: calc((100vh - 375px) / 2) 0 !important;
   }
 }
 
@@ -693,6 +678,10 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   }
   nav.main-nav ul li:last-child {
     margin-right: 50px;
+  }
+  .fancybox-navigation .fancybox-button div {
+    background: rgba(30, 30, 30, 0.6);
+    border-radius: 50%;
   }
 }
 
@@ -798,16 +787,11 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   .swiper-button-next:hover, .swiper-button-prev:hover {
     color: #2a2d3a !important;
   }
-  .fancybox__slide img {
+  .fancybox-image {
     border-radius: 0;
   }
-  .fancybox__content {
-    width: 100% !important;
-    height: 270px !important;
-  }
-  .carousel__button.is-close {
-    top: 53px !important;
-    right: calc(((100vw - 90%) / 2) + 4px) !important;
+  .fancybox-slide--image {
+    padding: calc((100vh - 270px) / 2) 0 !important;
   }
 }
 
