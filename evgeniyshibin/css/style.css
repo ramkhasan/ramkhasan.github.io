@@ -474,11 +474,6 @@ nav.main-nav ul li a.link:active {
   border-radius: 16px;
 }
 
-.fancybox-toolbar, .fancybox-infobar, .fancybox-navigation .fancybox-button {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
 .fancybox-infobar {
   font-size: 14px !important;
 }
