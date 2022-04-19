@@ -479,11 +479,6 @@ nav.main-nav ul li a.link:active {
   letter-spacing: -2px;
 }
 
-.fancybox-infobar, .fancybox-navigation .fancybox-button, .fancybox-toolbar {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
 .fancybox-button {
   background: none !important;
   color: #ffffff !important;
