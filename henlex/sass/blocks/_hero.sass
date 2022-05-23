@@ -1,0 +1,176 @@
+.hero 
+  position: relative
+  height: 100vh
+  color: $white-color
+  &-block 
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-direction: column
+  &-logo 
+    background-color: $bg-color
+    width: 100%
+    display: flex
+    justify-content: center
+    padding: 4%
+    & img 
+      width: 330px
+  &-text
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 5% 0
+    width: 100%
+    &__title 
+      margin-bottom: 24px
+      +bold
+      font-size: 46px
+      line-height: 68px
+    &__subtitle 
+      color: $text-color
+      +med
+      font-size: 22px
+      line-height: 32px
+  &-arrow 
+    display: block
+    margin-bottom: 5%
+    & svg
+      display: block
+      transition: all .3s ease
+      cursor: pointer
+      animation: downarrow 1.7s infinite ease
+      &:hover 
+        opacity: .7
+
+@-webkit-keyframes downarrow
+  0%
+    transform: translateY(0)
+  50% 
+    transform: translateY(-7px)
+  55%
+    transform: translateY(-7px)
+  100%
+    transform: translateY(0)
+
+@media (min-width: 1920px)
+  .hero 
+    &-text 
+      padding: 10%
+    &-arrow 
+      margin-bottom: 10%
+
+// @media (max-width: 1440px)
+//   .hero 
+//     &-text 
+//       &__title 
+//         font-size: 24px
+//         & span 
+//           font-size: 70px
+//       &__list 
+//         margin-bottom: 40px
+//         font-size: 20px
+//         &-item 
+//           margin-bottom: 22px
+//           &:last-child
+//             &:after
+//               height: 90px
+//       &__button 
+//         margin-left: 90px
+//     &-image 
+//       & img 
+//         right: 60px
+//         width: 45%
+//       &__partner 
+//         top: 100px
+//         right: 0
+//         max-width: 250px
+//         &-function 
+//           font-size: 14px
+// @media (max-width: 1280px)
+//   .hero 
+//     &-block 
+//       padding-bottom: 100px
+//     &-image
+//       & img 
+//         right: -200px
+//         width: 60%
+//       &__partner 
+//         top: auto
+//         bottom: 50px
+//         left: 0
+//         max-width: 420px
+//         &-function 
+//           &:before 
+//             width: 250%
+//           & br 
+//             display: none
+// @media (max-width: 1024px)
+//   .hero 
+//     &-text 
+//       &__title 
+//         font-size: 20px
+//         & span 
+//           font-size: 60px
+//     &-image
+//       & img 
+//         right: -250px
+//         width: 68%
+// @media (max-width: 768px)
+//   .hero
+//     &-text 
+//       &__list-item:last-child:after
+//         height: 82px
+// @media (max-width: 534px)
+//   .hero
+//     &-block 
+//       flex-direction: column
+//       padding-bottom: 0
+//     &-text 
+//       padding-bottom: 40px
+//       &__title 
+//         font-size: 14px
+//         & span 
+//           font-size: 32px
+//       &__list
+//         font-size: 16px
+//         &-item:last-child:after
+//           height: 80px
+//       &__button 
+//         margin-left: 20px
+//     &-image 
+//       position: relative
+//       & img 
+//         position: relative
+//         width: 100%
+//         right: 0
+//       &__partner 
+//         bottom: 5%
+//         left: auto
+//         max-width: 240px
+//         padding: 10px
+//         z-index: 1
+//         & br 
+//           display: block
+//         &-name 
+//           font-size: 14px
+//         &-function 
+//           font-size: 12px
+//         &:after 
+//           content: ""
+//           display: block
+//           position: absolute
+//           top: 0
+//           left: 0
+//           z-index: -1
+//           width: 100vw
+//           height: 100%
+//           background-color: $black-color
+// @media (max-width: 320px)
+//   .hero 
+//     &-text 
+//       &__title 
+//         font-size: 12px
+//         & span 
+//           font-size: 28px
+//       &__list
+//         font-size: 14px

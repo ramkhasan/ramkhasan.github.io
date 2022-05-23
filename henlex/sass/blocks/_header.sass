@@ -1,0 +1,122 @@
+.header 
+  width: 100%
+  padding: 20px 0
+  color: $white-color
+  &-block 
+    display: flex 
+    align-items: center
+    justify-content: space-between
+  &-logo 
+    display: flex
+    height: 40px
+    & img 
+      width: 100%
+      height: 100%
+  &-contacts 
+    display: flex
+    align-items: center
+    justify-content: space-between
+    color: $white-color
+    font-size: 18px
+  &-email 
+    display: flex
+    margin-right: 40px
+    +med
+    &__title 
+      padding-right: 10px
+      color: $text-color
+    & a
+      position: relative
+      color: $white-color
+      padding-bottom: 2px
+      display: inline-block
+      text-decoration: none
+      &:after 
+        content: ''
+        position: absolute
+        bottom: 0
+        height: 1px
+        left: -0.025em
+        right: -0.075em
+        background: $white-color
+        background-size: 100% 100%
+        opacity: 0
+        transition: .3s opacity, background .3s linear .2s
+      &:hover:after
+        opacity: 1
+  &-phone 
+    display: flex
+    +med
+    &__title 
+      padding-right: 10px
+      color: $text-color
+    & a 
+      position: relative
+      color: $white-color
+      padding-bottom: 2px
+      display: inline-block
+      text-decoration: none
+      &:after 
+        content: ''
+        position: absolute
+        bottom: 0
+        height: 1px
+        left: -0.025em
+        right: -0.075em
+        background: $white-color
+        background-size: 100% 100%
+        opacity: 0
+        transition: .3s opacity, background .3s linear .2s
+      &:hover:after
+        opacity: 1
+    &__img 
+      margin-right: 12px
+      width: 16px
+      height: 20px
+      & img
+        width: 100%
+        height: 100%
+    &__tels 
+      display: flex
+      flex-direction: column
+    &__tel
+      color: $white-color
+      transition: all .3s ease
+      &:first-child
+        +bold
+      & span 
+        color: $main-color
+        transition: all .3s ease
+      &:hover 
+        &.header-phone__tel 
+          color: $main-color
+          & span 
+            color: $white-color
+      
+// @media (max-width: 1440px)
+//   .header 
+//     &-contacts 
+//       width: 790px
+//     &-phone 
+//       &__phones
+//         width: 140px
+//     &-callback 
+//       padding: 6px 70px
+// @media (max-width: 1280px)
+//   .header 
+//     &-contacts 
+//       display: none
+//     &-menu
+//       display: block
+// @media (max-width: 534px)
+//   .header 
+//     &-logo
+//       width: 225px
+//       margin-right: 20px
+//     &-callback 
+//       padding: 6px 50px
+//       font-size: 16px
+// @media (max-width: 320px)
+//   .header 
+//     &-logo
+//       width: 200px

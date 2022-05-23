@@ -1,0 +1,92 @@
+.footer 
+  position: relative
+  height: 100vh
+  &-block
+    height: 100vh
+    display: flex
+    align-items: center
+  &-text 
+    position: absolute
+    left: 0
+    z-index: 2
+    padding: 60px
+    max-width: 480px
+    width: 100%
+    background-color: $bg-color
+    &__title 
+      margin-bottom: 24px
+      color: $main-color
+      +bold
+      font-size: 40px
+      line-height: 68px
+  &-email 
+    display: flex
+    margin-bottom: 4px
+    +med
+    font-size: 18px
+    &__title 
+      padding-right: 10px
+      color: $text-color
+    & a
+      position: relative
+      color: $white-color
+      padding-bottom: 2px
+      display: inline-block
+      text-decoration: none
+      &:after 
+        content: ''
+        position: absolute
+        bottom: 0
+        height: 1px
+        left: -0.025em
+        right: -0.075em
+        background: $white-color
+        background-size: 100% 100%
+        opacity: 0
+        transition: .3s opacity, background .3s linear .2s
+      &:hover:after
+        opacity: 1
+  &-phone 
+    display: flex
+    margin-bottom: 28px
+    +med
+    font-size: 18px
+    &__title 
+      padding-right: 10px
+      color: $text-color
+    & a
+      position: relative
+      color: $white-color
+      padding-bottom: 2px
+      display: inline-block
+      text-decoration: none
+      &:after 
+        content: ''
+        position: absolute
+        bottom: 0
+        height: 1px
+        left: -0.025em
+        right: -0.075em
+        background: $white-color
+        background-size: 100% 100%
+        opacity: 0
+        transition: .3s opacity, background .3s linear .2s
+      &:hover:after
+        opacity: 1
+  &-address
+    display: flex
+    +med
+    font-size: 18px
+    &__title 
+      padding-right: 10px
+      color: $text-color
+    &__subtitle
+      position: relative
+      color: $white-color
+#footer-map
+  position: absolute
+  left: -50vw
+  right: -50vw
+  margin: auto
+  width: 100vw
+  height: 100vh
