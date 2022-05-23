@@ -6,6 +6,32 @@ $('a[href*="#"]').on('click', function() {
   return false;
 });
 
+//Кнопка вверх
+(function scrollTop() {
+  const scrollButton = document.querySelector('.scrollTop');
+  if (!scrollButton) return;
+  let trigger = false;
+  function resetTrigger() {
+      trigger = true;
+  }
+  window.addEventListener('scroll', resetTrigger);
+  let scrollInterval = setInterval(function () {
+      if (!trigger) return;
+      trigger = false;
+      let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrolled >= 400) {
+          scrollButton.classList.add('active');
+      }
+      else {
+          scrollButton.classList.remove('active');
+      }
+  }, 250);
+  scrollButton.addEventListener('click', function (e) {
+      e.preventDefault();
+      $("html, body").animate({scrollTop: 0}, 1000);
+  });
+})();
+
 // Анимация при скролле страницы
 let scroll =
   window.requestAnimationFrame ||
