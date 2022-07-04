@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TuninGun</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="..//node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+  </head>
+
+  <body>
+
+    <header class="header">
+
+      <div class="container">
+
+        <div class="row">
+
+          <nav class="navbar navbar-expand-lg">
+  
+            <a class="navbar-brand" href="#">Tunin<span>Gun</span></a>
+  
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+                <li class="nav-item dropdown d-flex text-bg-dark align-items-center menu">
+                  <div class="menu-btn">
+                    <div class="menu-btn__burger"></div>
+                  </div>
+                  Catalog
+                  <!-- <a class="nav-link text-bg-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Catalog
+                  </a> -->
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Red dots</a></li>
+                    <li><a class="dropdown-item" href="#">Flashlights</a></li>
+                    <li><a class="dropdown-item" href="#">Weapon upgrade</a></li>
+                    <li><a class="dropdown-item" href="#">Lasers</a></li>
+                    <li><a class="dropdown-item" href="#">Machine gun upgrade</a></li>
+                  </ul>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacts</a>
+                </li>
+              </ul>
+            </div>
+    
+            <a class="email" href="mailto:info@tuningun.com">info@tuningun.com</a>
+    
+            <button type="button" class="btn bg-light position-relative">
+              <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.46447 13.4645C2.40215 12.5268 3.67392 12 5 12H13C14.3261 12 15.5979 12.5268 16.5355 13.4645C17.4732 14.4021 18 15.6739 18 17V19C18 19.5523 17.5523 20 17 20C16.4477 20 16 19.5523 16 19V17C16 16.2044 15.6839 15.4413 15.1213 14.8787C14.5587 14.3161 13.7956 14 13 14H5C4.20435 14 3.44129 14.3161 2.87868 14.8787C2.31607 15.4413 2 16.2044 2 17V19C2 19.5523 1.55228 20 1 20C0.447715 20 0 19.5523 0 19V17C0 15.6739 0.526784 14.4021 1.46447 13.4645Z" fill="#142226"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2C7.34315 2 6 3.34315 6 5C6 6.65685 7.34315 8 9 8C10.6569 8 12 6.65685 12 5C12 3.34315 10.6569 2 9 2ZM4 5C4 2.23858 6.23858 0 9 0C11.7614 0 14 2.23858 14 5C14 7.76142 11.7614 10 9 10C6.23858 10 4 7.76142 4 5Z" fill="#142226"/>
+              </svg>                
+            </button>
+    
+            <button type="button" class="btn bg-light position-relative">
+              <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M3.2 0.4C3.38885 0.148194 3.68524 0 4 0H16C16.3148 0 16.6111 0.148194 16.8 0.4L19.8 4.4C19.9298 4.5731 20 4.78363 20 5V19C20 19.7957 19.6839 20.5587 19.1213 21.1213C18.5587 21.6839 17.7957 22 17 22H3C2.20435 22 1.44129 21.6839 0.87868 21.1213C0.31607 20.5587 0 19.7957 0 19V5C0 4.78363 0.0701779 4.5731 0.2 4.4L3.2 0.4ZM4.5 2L2 5.33333V19C2 19.2652 2.10536 19.5196 2.29289 19.7071C2.48043 19.8946 2.73478 20 3 20H17C17.2652 20 17.5196 19.8946 17.7071 19.7071C17.8946 19.5196 18 19.2652 18 19V5.33333L15.5 2H4.5Z" fill="#142226"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 4.44772 0.447715 4 1 4H19C19.5523 4 20 4.44772 20 5C20 5.55228 19.5523 6 19 6H1C0.447715 6 0 5.55228 0 5Z" fill="#142226"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6 8C6.55228 8 7 8.44771 7 9C7 9.79565 7.31607 10.5587 7.87868 11.1213C8.44129 11.6839 9.20435 12 10 12C10.7956 12 11.5587 11.6839 12.1213 11.1213C12.6839 10.5587 13 9.79565 13 9C13 8.44771 13.4477 8 14 8C14.5523 8 15 8.44771 15 9C15 10.3261 14.4732 11.5979 13.5355 12.5355C12.5979 13.4732 11.3261 14 10 14C8.67392 14 7.40215 13.4732 6.46447 12.5355C5.52678 11.5979 5 10.3261 5 9C5 8.44771 5.44772 8 6 8Z" fill="#142226"/>
+              </svg>                
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+                2
+              </span>
+            </button>
+    
+          </nav>
+
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+
+          <nav class="navbar navbar-expand-lg">
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Red dots</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Flashlights</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Weapon upgrade</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Lasers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Machine gun upgrade</a>
+              </li>
+  
+            </ul>
+
+          </nav>
+
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.container -->
+
+    </header>
+    <!-- /.header -->
+    
+    <section class="section hero">
+
+      <div class="row">
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card-body">
+                  <div class="label-top primary">Hit</div>
+                  <h1 class="card-title">Tuning carbines 2022 from the manufacturer</h1>
+                  <p class="card-text">New arrival of rails B-10 only in our store with a discount of up to 30%</p>
+                  <a href="#" class="btn btn-primary">Go shopping 
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29289 0.292893C7.68342 -0.0976311 8.31658 -0.0976311 8.70711 0.292893L15.7071 7.29289C16.0976 7.68342 16.0976 8.31658 15.7071 8.70711L8.70711 15.7071C8.31658 16.0976 7.68342 16.0976 7.29289 15.7071C6.90237 15.3166 6.90237 14.6834 7.29289 14.2929L13.5858 8L7.29289 1.70711C6.90237 1.31658 6.90237 0.683417 7.29289 0.292893Z" fill="#142226"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 7.44772 0.447715 7 1 7H14C14.5523 7 15 7.44772 15 8C15 8.55228 14.5523 9 14 9H1C0.447715 9 0 8.55228 0 8Z" fill="#142226"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <img src="img/banner.jpg">
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card-body">
+                  <h1 class="card-title">Tuning carbines 2022 from the manufacturer</h1>
+                  <p class="card-text">New arrival of rails B-10 only in our store with a discount of up to 30%</p>
+                  <a href="#" class="btn btn-primary">Go shopping
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29289 0.292893C7.68342 -0.0976311 8.31658 -0.0976311 8.70711 0.292893L15.7071 7.29289C16.0976 7.68342 16.0976 8.31658 15.7071 8.70711L8.70711 15.7071C8.31658 16.0976 7.68342 16.0976 7.29289 15.7071C6.90237 15.3166 6.90237 14.6834 7.29289 14.2929L13.5858 8L7.29289 1.70711C6.90237 1.31658 6.90237 0.683417 7.29289 0.292893Z" fill="#142226"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 7.44772 0.447715 7 1 7H14C14.5523 7 15 7.44772 15 8C15 8.55228 14.5523 9 14 9H1C0.447715 9 0 8.55228 0 8Z" fill="#142226"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <img src="img/banner.jpg">
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card-body">
+                  <h1 class="card-title">Tuning carbines 2022 from the manufacturer</h1>
+                  <p class="card-text">New arrival of rails B-10 only in our store with a discount of up to 30%</p>
+                  <a href="#" class="btn btn-primary">Go shopping
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29289 0.292893C7.68342 -0.0976311 8.31658 -0.0976311 8.70711 0.292893L15.7071 7.29289C16.0976 7.68342 16.0976 8.31658 15.7071 8.70711L8.70711 15.7071C8.31658 16.0976 7.68342 16.0976 7.29289 15.7071C6.90237 15.3166 6.90237 14.6834 7.29289 14.2929L13.5858 8L7.29289 1.70711C6.90237 1.31658 6.90237 0.683417 7.29289 0.292893Z" fill="#142226"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 7.44772 0.447715 7 1 7H14C14.5523 7 15 7.44772 15 8C15 8.55228 14.5523 9 14 9H1C0.447715 9 0 8.55228 0 8Z" fill="#142226"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <img src="img/banner.jpg">
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card-body">
+                  <h1 class="card-title">Tuning carbines 2022 from the manufacturer</h1>
+                  <p class="card-text">New arrival of rails B-10 only in our store with a discount of up to 30%</p>
+                  <a href="#" class="btn btn-primary">Go shopping
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29289 0.292893C7.68342 -0.0976311 8.31658 -0.0976311 8.70711 0.292893L15.7071 7.29289C16.0976 7.68342 16.0976 8.31658 15.7071 8.70711L8.70711 15.7071C8.31658 16.0976 7.68342 16.0976 7.29289 15.7071C6.90237 15.3166 6.90237 14.6834 7.29289 14.2929L13.5858 8L7.29289 1.70711C6.90237 1.31658 6.90237 0.683417 7.29289 0.292893Z" fill="#142226"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 7.44772 0.447715 7 1 7H14C14.5523 7 15 7.44772 15 8C15 8.55228 14.5523 9 14 9H1C0.447715 9 0 8.55228 0 8Z" fill="#142226"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <img src="img/banner.jpg">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </section>
+    <!-- /.section hero -->
+
+    <section class="section catalog">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col">
+
+            <h2 class="section-title">Catalog</h2>
+            <!-- /.section-title -->
+            <a href="#" class="btn btn-link">If an item is out of stock, order it from
+              us.</a>
+
+          </div>
+          <!-- /.col -->
+
+          <div class="col">
+
+            <div class="card card-product-grid" style="width: 350px;">
+              <img src="img/red-dots.jpg" class="card-img-top" alt="Red dots">
+              <div class="card-body">
+                <div class="clearfix mb3">
+                  <h5 class="float-start card-title">Red dots</h5>
+                  <a href="#" class="float-end card-link">39 <img src="img/arrow.svg"></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /.col -->
+
+          <div class="col">
+
+            <div class="card card-product-grid" style="width: 350px;">
+              <img src="img/flashlights.jpg" class="card-img-top" alt="Red dots">
+              <div class="label-top success">New</div>
+              <div class="card-body">
+                <div class="clearfix mb3">
+                  <h5 class="float-start card-title">Flashlights</h5>
+                  <a href="#" class="float-end card-link">54 <img src="img/arrow.svg"></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /.col -->
+
+          <div class="col">
+
+            <div class="card card-product-grid" style="width: 350px;">
+              <img src="img/weapon-upgrade.jpg" class="card-img-top" alt="Red dots">
+              <div class="card-body">
+                <div class="clearfix mb3">
+                  <h5 class="float-start card-title">Weapon upgrade</h5>
+                  <a href="#" class="float-end card-link">22 <img src="img/arrow.svg"></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /.col -->
+
+          <div class="col">
+
+            <div class="card card-product-grid" style="width: 350px;">
+              <img src="img/lasers.jpg" class="card-img-top" alt="Red dots">
+              <div class="card-body">
+                <div class="clearfix mb3">
+                  <h5 class="float-start card-title">Lasers</h5>
+                  <a href="#" class="float-end card-link">14 <img src="img/arrow.svg"></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /.col -->
+
+          <div class="col">
+
+            <div class="card card-product-grid" style="width: 350px;">
+              <img src="img/machine-gun-upgrade.jpg" class="card-img-top" alt="Red dots">
+              <div class="card-body">
+                <div class="clearfix mb3">
+                  <h5 class="float-start card-title">Machine gun upgrade</h5>
+                  <a href="#" class="float-end card-link">8 <img src="img/arrow.svg"></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /.col -->
+
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.container -->
+
+    </section>
+    <!-- /.section catalog -->
+
+    <section class="section popular">
+
+      <div class="container">
+
+        <div class="row">
+
+          <h2 class="section-title">Popular</h2>
+          <!-- /.section-title -->
+
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+
+          <div class="col">
+
+            <div class="card card-product-grid" style="width: 300px;">
+              <img src="img/red-dots.jpg" class="card-img-top" alt="Red dots">
+              <div class="label-top primary">Hit</div>
+              <div class="card-body">
+                <h5 class="card-title">PV-B39 PLATFORM</h5>
+                <p class="card-text">For Basis rail 39 mm high</p>
+                <div class="clearfix mb3">
+                  <div class="float-start prices">
+                    <span class="card-price">$41.60</span>
+                    <span class="card-old-price">$53.00</span>
+                  </div>
+                  <button type="button" class="float-end btn bg-light">
+                    <img src="img/basket.svg" alt="Корзина">
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /.col -->
+
+          <div class="col">
+
+            <div class="card card-product-grid" style="width: 300px;">
+              <img src="img/red-dots.jpg" class="card-img-top" alt="Red dots">
+              <div class="card-body">
+                <h5 class="card-title">B-25U RAIL</h5>
+                <p class="card-text">Allows to attach RK grips at an angle of 45°</p>
+                <div class="clearfix mb3">
+                  <div class="float-start prices">
+                    <span class="card-price">$43.34</span>
+                    <span class="card-old-price">$100.20</span>
+                  </div>
+                  <button type="button" class="float-end btn bg-light">
+                    <img src="img/basket.svg" alt="Корзина">
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /.col -->
+
+          <div class="col">
+
+            <div class="card card-product-grid" style="width: 300px;">
+              <img src="img/red-dots.jpg" class="card-img-top" alt="Red dots">
+              <div class="card-body">
+                <h5 class="card-title">SPORT-4 KIT</h5>
+                <p class="card-text">Designed for AK with long barrel (415mm). Has Basis rails on all sides</p>
+                <div class="clearfix mb3">
+                  <div class="float-start prices">
+                    <span class="card-price">$515.50</span>
+                    <span class="card-old-price">$600.45</span>
+                  </div>
+                  <button type="button" class="float-end btn bg-light">
+                    <img src="img/basket.svg" alt="Корзина">
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /.col -->
+
+          <div class="col">
+
+            <div class="card card-product-grid" style="width: 300px;">
+              <img src="img/red-dots.jpg" class="card-img-top" alt="Red dots">
+              <div class="label-top danger">Hot</div>
+              <div class="card-body">
+                <h5 class="card-title">PERST-3 CD GEN. 3.1</h5>
+                <p class="card-text">A dual laser, in an IR and red ranges + an IR illuminator</p>
+                <div class="clearfix mb3">
+                  <div class="float-start prices">
+                    <span class="card-price">$2,253.50</span>
+                    <span class="card-old-price">$3,050.00</span>
+                  </div>
+                  <button type="button" class="float-end btn bg-light">
+                    <img src="img/basket.svg" alt="Корзина">
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /.col -->
+
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+
+          <a href="#" class="popular-show btn btn-link">Show more</a>
+
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.container -->
+
+    </section>
+    <!-- /.section popular -->
+
+    <section class="section accessories">
+
+      <div class="row">
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Accessories. New category</h5>
+                  <p class="card-text">With the opening of a new category, have time to buy with a discount of up to 20%</p>
+                  <a href="#" class="btn btn-primary">Subscribe
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29289 0.292893C7.68342 -0.0976311 8.31658 -0.0976311 8.70711 0.292893L15.7071 7.29289C16.0976 7.68342 16.0976 8.31658 15.7071 8.70711L8.70711 15.7071C8.31658 16.0976 7.68342 16.0976 7.29289 15.7071C6.90237 15.3166 6.90237 14.6834 7.29289 14.2929L13.5858 8L7.29289 1.70711C6.90237 1.31658 6.90237 0.683417 7.29289 0.292893Z" fill="#142226"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 7.44772 0.447715 7 1 7H14C14.5523 7 15 7.44772 15 8C15 8.55228 14.5523 9 14 9H1C0.447715 9 0 8.55228 0 8Z" fill="#142226"/>
+                      </svg>
+                  </a>
+                </div>
+              </div>
+              <img src="img/banner-2.jpg">
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Accessories. New category</h5>
+                  <p class="card-text">With the opening of a new category, have time to buy with a discount of up to 20%</p>
+                  <a href="#" class="btn btn-primary">Subscribe
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29289 0.292893C7.68342 -0.0976311 8.31658 -0.0976311 8.70711 0.292893L15.7071 7.29289C16.0976 7.68342 16.0976 8.31658 15.7071 8.70711L8.70711 15.7071C8.31658 16.0976 7.68342 16.0976 7.29289 15.7071C6.90237 15.3166 6.90237 14.6834 7.29289 14.2929L13.5858 8L7.29289 1.70711C6.90237 1.31658 6.90237 0.683417 7.29289 0.292893Z" fill="#142226"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 7.44772 0.447715 7 1 7H14C14.5523 7 15 7.44772 15 8C15 8.55228 14.5523 9 14 9H1C0.447715 9 0 8.55228 0 8Z" fill="#142226"/>
+                      </svg>
+                  </a>
+                </div>
+              </div>
+              <img src="img/banner-2.jpg">
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Accessories. New category</h5>
+                  <p class="card-text">With the opening of a new category, have time to buy with a discount of up to 20%</p>
+                  <a href="#" class="btn btn-primary">Subscribe
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29289 0.292893C7.68342 -0.0976311 8.31658 -0.0976311 8.70711 0.292893L15.7071 7.29289C16.0976 7.68342 16.0976 8.31658 15.7071 8.70711L8.70711 15.7071C8.31658 16.0976 7.68342 16.0976 7.29289 15.7071C6.90237 15.3166 6.90237 14.6834 7.29289 14.2929L13.5858 8L7.29289 1.70711C6.90237 1.31658 6.90237 0.683417 7.29289 0.292893Z" fill="#142226"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 7.44772 0.447715 7 1 7H14C14.5523 7 15 7.44772 15 8C15 8.55228 14.5523 9 14 9H1C0.447715 9 0 8.55228 0 8Z" fill="#142226"/>
+                      </svg>
+                  </a>
+                </div>
+              </div>
+              <img src="img/banner-2.jpg">
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Accessories. New category</h5>
+                  <p class="card-text">With the opening of a new category, have time to buy with a discount of up to 20%</p>
+                  <a href="#" class="btn btn-primary">Subscribe
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29289 0.292893C7.68342 -0.0976311 8.31658 -0.0976311 8.70711 0.292893L15.7071 7.29289C16.0976 7.68342 16.0976 8.31658 15.7071 8.70711L8.70711 15.7071C8.31658 16.0976 7.68342 16.0976 7.29289 15.7071C6.90237 15.3166 6.90237 14.6834 7.29289 14.2929L13.5858 8L7.29289 1.70711C6.90237 1.31658 6.90237 0.683417 7.29289 0.292893Z" fill="#142226"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 7.44772 0.447715 7 1 7H14C14.5523 7 15 7.44772 15 8C15 8.55228 14.5523 9 14 9H1C0.447715 9 0 8.55228 0 8Z" fill="#142226"/>
+                      </svg>
+                  </a>
+                </div>
+              </div>
+              <img src="img/banner-2.jpg">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </section>
+    <!-- /.section accessories -->
+
+    <section class="section advantages">
+
+      <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+          <div class="col d-flex align-items-start">
+            <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H16C16.5523 0 17 0.447715 17 1V14C17 14.5523 16.5523 15 16 15H1C0.447715 15 0 14.5523 0 14V1ZM2 2V13H15V2H2Z" fill="#E57D28"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 6C15 5.44772 15.4477 5 16 5H20C20.2652 5 20.5196 5.10536 20.7071 5.29289L23.7071 8.29289C23.8946 8.48043 24 8.73478 24 9V14C24 14.5523 23.5523 15 23 15H16C15.4477 15 15 14.5523 15 14V6ZM17 7V13H22V9.41421L19.5858 7H17Z" fill="#E57D28"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 15C4.67157 15 4 15.6716 4 16.5C4 17.3284 4.67157 18 5.5 18C6.32843 18 7 17.3284 7 16.5C7 15.6716 6.32843 15 5.5 15ZM2 16.5C2 14.567 3.567 13 5.5 13C7.433 13 9 14.567 9 16.5C9 18.433 7.433 20 5.5 20C3.567 20 2 18.433 2 16.5Z" fill="#E57D28"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 15C17.6716 15 17 15.6716 17 16.5C17 17.3284 17.6716 18 18.5 18C19.3284 18 20 17.3284 20 16.5C20 15.6716 19.3284 15 18.5 15ZM15 16.5C15 14.567 16.567 13 18.5 13C20.433 13 22 14.567 22 16.5C22 18.433 20.433 20 18.5 20C16.567 20 15 18.433 15 16.5Z" fill="#E57D28"/>
+            </svg>              
+            <div>
+              <h4 class="fw-bold mb-0">Fast shipping</h4>
+              <p>Convenient delivery to any corner of the country</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7071 1.29289C17.0976 1.68342 17.0976 2.31658 16.7071 2.70711L2.70711 16.7071C2.31658 17.0976 1.68342 17.0976 1.29289 16.7071C0.902369 16.3166 0.902369 15.6834 1.29289 15.2929L15.2929 1.29289C15.6834 0.902369 16.3166 0.902369 16.7071 1.29289Z" fill="#E63946"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C2.67157 2 2 2.67157 2 3.5C2 4.32843 2.67157 5 3.5 5C4.32843 5 5 4.32843 5 3.5C5 2.67157 4.32843 2 3.5 2ZM0 3.5C0 1.567 1.567 0 3.5 0C5.433 0 7 1.567 7 3.5C7 5.433 5.433 7 3.5 7C1.567 7 0 5.433 0 3.5Z" fill="#E63946"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 13C13.6716 13 13 13.6716 13 14.5C13 15.3284 13.6716 16 14.5 16C15.3284 16 16 15.3284 16 14.5C16 13.6716 15.3284 13 14.5 13ZM11 14.5C11 12.567 12.567 11 14.5 11C16.433 11 18 12.567 18 14.5C18 16.433 16.433 18 14.5 18C12.567 18 11 16.433 11 14.5Z" fill="#E63946"/>
+            </svg>              
+            <div>
+              <h4 class="fw-bold mb-0">Permanent discounts</h4>
+              <p>Regular discounts and promotions</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4167 2C10.1404 2 9.87547 2.10536 9.68012 2.29289C9.48477 2.48043 9.37502 2.73478 9.37502 3V11.382L12.0342 10.1056C12.1788 10.0361 12.3383 10 12.5 10H20.8334C21.1096 10 21.3746 9.89464 21.5699 9.70711C21.7653 9.51957 21.875 9.26522 21.875 9V3C21.875 2.73478 21.7653 2.48043 21.5699 2.29289C21.3746 2.10536 21.1096 2 20.8334 2H10.4167ZM8.20698 0.87868C8.79303 0.316071 9.58789 0 10.4167 0H20.8334C21.6622 0 22.457 0.316071 23.0431 0.87868C23.6291 1.44129 23.9584 2.20435 23.9584 3V9C23.9584 9.79565 23.6291 10.5587 23.0431 11.1213C22.457 11.6839 21.6622 12 20.8334 12H12.7459L8.7992 13.8944C8.4763 14.0494 8.09282 14.0329 7.78572 13.8507C7.47862 13.6684 7.29169 13.3466 7.29169 13V3C7.29169 2.20435 7.62093 1.44129 8.20698 0.87868Z" fill="#6F87EE"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.915291 2.87868C1.50134 2.31607 2.2962 2 3.125 2H4.6875C5.2628 2 5.72917 2.44772 5.72917 3C5.72917 3.55228 5.2628 4 4.6875 4H3.125C2.84873 4 2.58378 4.10536 2.38843 4.29289C2.19308 4.48043 2.08333 4.73478 2.08333 5V21C2.08333 21.2652 2.19308 21.5196 2.38843 21.7071C2.58378 21.8946 2.84873 22 3.125 22H14.5833C14.8596 22 15.1246 21.8946 15.3199 21.7071C15.5153 21.5196 15.625 21.2652 15.625 21V15C15.625 14.4477 16.0914 14 16.6667 14C17.242 14 17.7083 14.4477 17.7083 15V21C17.7083 21.7957 17.3791 22.5587 16.793 23.1213C16.207 23.6839 15.4121 24 14.5833 24H3.125C2.2962 24 1.50134 23.6839 0.915291 23.1213C0.32924 22.5587 0 21.7957 0 21V5C0 4.20435 0.32924 3.44129 0.915291 2.87868Z" fill="#6F87EE"/>
+            </svg>              
+            <div>
+              <h4 class="fw-bold mb-0">Feedback 24/7</h4>
+              <p>We respond promptly and efficiently</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6585 12.8887C12.206 12.816 12.7087 13.201 12.7813 13.7485L13.9913 22.8685C14.0418 23.2491 13.8699 23.625 13.549 23.8358C13.2281 24.0466 12.8148 24.055 12.4855 23.8575L8.00002 21.1662L3.51452 23.8575C3.18525 24.0551 2.77193 24.0466 2.45099 23.8358C2.13004 23.625 1.95817 23.249 2.00873 22.8683L3.21873 13.7583C3.29145 13.2109 3.79421 12.826 4.34169 12.8987C4.88917 12.9714 5.27403 13.4742 5.20132 14.0217L4.26447 21.0751L7.48553 19.1425C7.80221 18.9525 8.19784 18.9525 8.51452 19.1425L11.7359 21.0753L10.7987 14.0115C10.7261 13.464 11.111 12.9613 11.6585 12.8887Z" fill="#24CF7E"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2ZM0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8Z" fill="#24CF7E"/>
+            </svg>              
+            <div>
+              <h4 class="fw-bold mb-0">Quality assurance</h4>
+              <p>Each product has its own certificate</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container -->
+
+    </section>
+    <!-- /.section advantages -->
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center bg-black text-white">
+
+      <div class="container">
+
+        <div class="row d-flex flex-wrap justify-content-between">
+
+          <div class="col d-flex flex-column align-items-start">
+
+            <h5 class="h5">Catalog</h5>
+
+            <nav class="navbar navbar-expand-lg">
+
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-start">
+      
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Red dots</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Flashlights</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Weapon upgrade</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Lasers</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Machine gun upgrade</a>
+                </li>
+      
+              </ul>
+      
+            </nav>
+
+          </div>
+          <!-- /.col -->
+
+          <div class="col d-flex flex-column align-items-end">
+
+            <h5 class="h5">Contacts</h5>
+            <a href="tel:+74950000000">+7 (495) 000-00-00</a>
+            <a href="mailto:info@tuningun.com" class="text-white">info@tuningun.com</a>
+
+          </div>
+          <!-- /.col -->
+
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+
+          <div class="d-flex flex-column flex-sm-row justify-content-between border-top">
+            <a class="navbar-brand" href="#">TuninGun</a>
+            <p>&copy; TuninGun, 2022. All rights reserved.</p>
+          </div>
+
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.container -->
+      
+    </footer> 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
+    <!-- <script src="..//node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      let swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
+          },
+        },
+        effect: "creative",
+        creativeEffect: {
+          prev: {
+            shadow: true,
+            translate: [0, 0, -400],
+          },
+          next: {
+            translate: ["100%", 0, 0],
+          },
+        },
+        // autoplay: {
+        //   delay: 5000,
+        // },
+      });
+    </script>
+
+  </body>
+
+</html>

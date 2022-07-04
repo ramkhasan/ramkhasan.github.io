@@ -1,0 +1,378 @@
+// *
+//   box-sizing: border-box    
+// body
+//   position: relative
+//   color: $dark
+//   height: 100%
+//   font-family: 'Titillium Web', sans-serif
+// img
+//   max-width: 100%
+// main 
+//   position: relative
+//   overflow: hidden
+// .section
+//   padding: 0 0 80px
+  // &-title 
+  //   font-family: 'Titillium Web', sans-serif
+  //   font-size: 36px
+  //   text-align: center
+  //   margin: auto
+  //   padding-bottom: 74px
+a 
+  color: $dark
+  text-decoration: none
+  &:hover 
+    color: $dark
+
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm 
+  // --bs-gutter-x: 0
+  width: 95%
+//   padding-right: 0
+//   padding-left: 0
+
+// .row 
+//   --bs-gutter-x: 0
+//   margin-top: 0
+//   margin-right: 0
+//   margin-left: 0
+
+// .row > * 
+//   padding-right: 0
+//   padding-left: 0
+//   margin-top: 0
+  
+// Swiper 
+.swiper 
+  width: 100%
+.hero
+  & .swiper 
+    height: 640px
+    &-slide 
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 85px 100%, 0 555px)
+.accessories
+  & .swiper 
+    height: 470px
+    &-slide 
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 85px 100%, 0 385px)
+.swiper-slide 
+  text-align: left
+  background: #c7c7c7
+  // padding: 40px
+.swiper-slide img 
+  display: block
+  width: 100%
+  height: 100%
+  object-fit: cover
+.swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets
+  right: 60px !important
+.swiper-pagination-bullet
+  display: flex !important
+  align-items: center !important
+  margin-top: 20px !important
+  margin-bottom: 20px !important
+  width: 0 !important
+  height: 0 !important
+  border-radius: 0 !important
+  background: $light !important
+  color: transparent !important
+  font-size: 14px
+  font-weight: 700
+  &:before
+    content: ''
+    position: absolute
+    right: 10px !important
+    width: 20px !important
+    height: 2px !important
+    border-radius: 2px !important
+    background: $light !important
+.swiper-pagination-bullet-active
+  color: $white !important
+  background: $white !important
+  &:before
+    content: ''
+    width: 40px !important
+    background: $white !important
+
+// Bootstrap
+// navbar 
+.navbar
+  --bs-navbar-padding-y: 2.5rem
+  &-brand
+    font-family: 'Titillium Web'
+    font-size: 34px
+    line-height: 52px
+    & span 
+      position: relative
+      font-weight: 900 
+      color: $primary
+      &:after
+        content: ''
+        position: absolute
+        bottom: 5px
+        height: 4px
+        left: 0
+        right: 0
+        background-color: $primary
+        background-size: 100% 100%
+
+.navbar-toggler 
+  width: 20px
+  height: 20px
+  position: relative
+  transition: .5s ease-in-out
+
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus 
+  outline: none
+  box-shadow: none
+  border: 0
+  position: relative
+
+
+.navbar-toggler span 
+  margin: 0
+  padding: 0
+
+
+.toggler-icon 
+  display: block
+  position: absolute
+  height: 2px
+  width: 100%
+  background: $primary
+  border-radius: 2px
+  opacity: 1
+  left: 0
+  transform: rotate(0deg)
+  transition: .25s ease-in-out
+
+
+.middle-bar 
+  margin-top: 0px
+
+
+
+/* State when the navbar is collapsed */
+
+.navbar-toggler.collapsed .top-bar 
+  position: absolute
+  top: 0px
+  transform: rotate(0deg)
+
+
+.navbar-toggler.collapsed .middle-bar 
+  opacity: 1
+  position: absolute
+  top: 10px
+  filter: alpha(opacity=100)
+  width: 14px
+
+
+.navbar-toggler.collapsed .bottom-bar 
+  position: absolute
+  top: 20px
+  transform: rotate(0deg)
+
+
+/* when navigation is clicked */
+
+.navbar-toggler .top-bar 
+  top: inherit
+  transform: rotate(135deg)
+
+
+.navbar-toggler .middle-bar 
+  opacity: 0
+  top: inherit
+  filter: alpha(opacity=0)
+
+
+.navbar-toggler .bottom-bar 
+  top: inherit
+  transform: rotate(-135deg)
+
+
+/* Color of 3 lines */
+
+// .navbar-toggler.collapsed .toggler-icon 
+//   background: linear-gradient( 263deg, rgba(252,74,74,1) 0%, rgba(0,212,255,1) 100% )
+
+
+// 2
+
+.menu-btn 
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 60px
+  height: 60px
+  cursor: pointer
+  transition: all .3s ease-in-out
+
+.menu-btn__burger 
+  width: 14px
+  height: 2px
+  background: $white
+  border-radius: 2px
+  transition: all .3s ease-in-out
+
+.menu-btn__burger::before,
+.menu-btn__burger::after 
+  content: ''
+  position: absolute
+  width: 20px
+  height: 2px
+  background: $white
+  border-radius: 2px
+  transition: all .3s ease-in-out
+
+.menu-btn__burger::before 
+  transform: translateY(-6px)
+
+.menu-btn__burger::after 
+  transform: translateY(6px)
+
+/* ANIMATION */
+.menu-btn.show .menu-btn__burger 
+  // transform: translateX(-50px)
+  background: transparent
+  box-shadow: none
+
+.menu-btn.show .menu-btn__burger::before 
+  transform: rotate(45deg)
+
+.menu-btn.show .menu-btn__burger::after 
+  transform: rotate(-45deg)
+
+.navbar-nav 
+  & .menu 
+    padding: 0 116px 0 0
+  & .dropdown-menu
+    top: 60px
+    width: 100%
+
+.navbar-expand-lg .navbar-nav .nav-link
+  position: relative
+  padding-left: 20px
+  padding-right: 20px
+  color: $dark
+  font-weight: 600
+  &:after
+    content: ''
+    opacity: 0
+    position: absolute
+    bottom: 7px
+    height: 1px
+    left: 20px
+    right: 20px
+    background: $dark
+    background-size: 100% 100%
+    transition: .3s opacity, background .3s linear .2s
+  &:hover:after 
+    content: ''
+    opacity: 1
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link
+  color: $primary
+  &:after
+    opacity: 1
+    background-color: $primary
+.email 
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    bottom: -1px
+    height: 1px
+    left: 0
+    right: 0
+    background-color: $dark
+    background-size: 100% 100% 
+    transition: .3s opacity, background .3s linear .2s
+  &:hover:after 
+    opacity: 0
+
+        
+// buttons
+.btn
+  border: none
+  border-radius: 0
+  transition: all .3s
+// card
+.card 
+  border: none 
+  border-radius: 0
+.card-img, .card-img-top 
+  border-radius: 0
+.card-body 
+  padding-left: 0
+  padding-right: 0
+
+.label-top
+  position: absolute
+  top: 0
+  left: 0
+  padding: 2px 20px
+  color: #fff
+  font-size: 20px
+  font-weight: 400
+  &.success
+    background-color: $success
+  &.primary
+    background-color: $primary
+  &.danger
+    background-color: $danger
+.hero 
+  & .label-top 
+    top: 36px
+    left: auto
+    right: 130px
+
+.hero, .accessories
+  & .row 
+    margin-left: 40px
+    margin-right: 40px
+  & .card
+    position: absolute
+    top: 40px
+    left: 40px
+    width: 865px
+    padding: 45px 87px 45px 175px
+
+@media (min-width: 1400px)
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl
+    max-width: 1385px
+// @media (min-width: 992px)
+//   .navbar-collapse .collapse
+//     display: none!important
+//   .navbar-collapse .collapse .show
+//     display: flex!important
+// @media (max-width: 1200px)
+//   .container
+//     max-width: 760px
+//     width: 95%
+// @media (max-width: 768px)
+//   .container
+//     max-width: 580px
+//     width: 90%
+// @media (max-width: 490px)
+//   .button
+//     font-size: 14px
+//     padding: 20px 60px
+//   .section
+//     &-title
+//       font-size: 25px
+//       line-height: 36px
+// @media (max-width: 320px)
+//   .container
+//     max-width: 750px
+//     width: 90%
